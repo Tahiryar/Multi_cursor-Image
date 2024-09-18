@@ -1,0 +1,36 @@
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.elem{
+    width: 100%;
+    height: 120px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.elem h1{
+    font-size: 4vw;
+    color: white;
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
+}
+.elem img{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}

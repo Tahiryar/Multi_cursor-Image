@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Cursor</title>
+    <link rel="stylesheet" href="multicrs.css">
+</head>
+<body>
+    <div id="main">
+        <div class="elem">
+            <h1>Tahir Yar</h1>
+            <img src="https://img.freepik.com/premium-photo/illustrate-serene-peaceful-nature-scene-summer-this-scene-inspires-peace-awe-tranquility-vivid-beautiful-colors-photorealistic-8k-mountain-add-18-year-old-boy_982322-65818.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725062400&semt=ais_hybrid" alt="">
+        </div>
+        <div class="elem">
+            <h1>Hamza</h1>
+            <img src="https://marvel-b1-cdn.bc0a.com/f00000000221635/www.mercyships.org/wp-content/uploads/2024/08/Frame-27-1.png" alt="">
+        </div>
+        <div class="elem">
+            <h1>Usman</h1>
+            <img src="https://img.freepik.com/premium-photo/handsome-boy-who-is-most-handsome-boy_1177187-42298.jpg" alt="">
+        </div>
+        <div class="elem">
+            <h1>Hassan</h1>
+            <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/2/portrait-of-a-young-teenaged-boy-with-braces-cavan-images.jpg" alt="">
+        </div>
+    </div>
+</body>
+  <script>
+    var elem=document.querySelectorAll(".elem");
+    elem.forEach((val)=>{
+        val.addEventListener('mouseenter',()=>{
+            val.childNodes[3].style.opacity=1;
+        })
+        val.addEventListener('mouseleave',()=>{
+            val.childNodes[3].style.opacity=0;
+        })
+        val.addEventListener('mousemove',(dets)=>{
+            val.childNodes[3].style.left=dets.x+"px";
+            val.childNodes[3].style.top=dets.y+"px";
+        })
+    })
+  </script>
+</html>
